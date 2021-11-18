@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Signika+Negative:wght@500&display=swap');
+
+
+//font types 
+$font-1: 'Alfa Slab One', cursive ;
+$font-2:'Signika Negative', sans-serif;
+
+//colors
+$fb-color:#4267B3;
+$you-color:#FF0000;
+$ig-color:#E1306C;
+
+$fff-color:#fff;
+
+$title-color-1:#04151f;
+$letras-color-1: #282828;
+$letras-color-2:#081c15;
+
+//header de letras colors
+$header-color-1:#137547;
+$header-color-active:#22577a;
+
+
+//header border color 
+
+$header-border-1:#086375;
+//header de backgroud de letras
+$header-bg-link:#7bf1a8;
+//header backgrounds
+$header-bg-1:rgba(199, 249, 204,.5);
+$header-bg-active:#52b69a;
+//footer bg colors rgba
+$bg-rgba-footer-1:rgba(199, 249, 204,.3);
+$bg-rgba-article-1:rgba(24, 255, 109,.6);
+//header box-shadows
+$header-box-shadow-1: 0px 5px 11px -2px rgba(0,0,0,0.1);
+
+//background colors
+$bg-footer-1:#c2c2c2;
+$bg-footer-2:#70e000;
+
+body{   
+    margin: 0;
+    padding: 0;
+}
+// nuevos estilos para jose
+
+header{
+    width: 100%;
+    height: 90px;
+    background: $header-bg-1;
+    box-shadow: $header-box-shadow-1;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 300ms ease;
+    z-index: 10;
+    .header-desktop-container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        height: 90px;
+        box-sizing: border-box;
+        .header-desktop-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1500px;
+            max-width: 100%;
+            
+            .brand-logo{
+                height: 90px;
+                /* background: rebeccapurple; */
+                .logo-img{
+                    img{
+                        width: 100px;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .nav-bar{
+                .nav-bar-menu{
+                    display: flex;
+                    max-width: 100%;
+                    margin-right: 10px;
+                    /* background: burlywood; */
+                    .nav-link{
+                        background: $header-bg-link;
+                        color: $header-color-1;
+                        text-decoration: none;
+                        padding: 10px;
+                        width: 90px;
+                        margin: 5px;
+                        box-sizing: border-box;
+                        text-align: center;
+                        display: block;
+                        font-family: 'Alfa Slab One', cursive;
+                        font-family: 'Signika Negative', sans-serif;
+                        border-radius: 20px;
+                        border: 1px solid $header-border-1;
+                        transition: all ease-in-out .2s;
+                    }
+
+                    .nav-link.active{
+                        background: $header-bg-active;
+                        color: $header-color-active;
+                    }
+                    .nav-link:hover{
+                        background: $header-bg-active;
+                        color: $header-color-active;
+                    }
+                }
+            }
+        }
+   }
+//display none al header de compus kp
+   @media (max-width:850px) {
+        /* .header-desktop-container{
+            display: none;
+        } */
+    }
+    
+}
+
+
+main {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 90px;
+    article{
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        background: url(../img/1920x400.jpg) no-repeat 0 center;
+        background-size: cover;
+        background-attachment: fixed;
+        h1{
+            width: 100%;
+            display: flex;  
+            justify-content: center;
+            font-family: $font-1;
+            font-family: $font-2;
+            z-index: 3;
+            font-size: 50px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background :$bg-rgba-article-1;
+        }
+    }
+    
+    
+
+}
+
+
+
+
+
+/* Scroller */
+.scroll-up{
+    transform: translateY(0);
+    width: 100%;
+    height: 90px;
+}
+
+.scroll-down{
+    transform: translateY(-100%);
+    width: 100%;
+    height: 90px;
+}
+
+
+
+
+//estilos del row y eso
+.row-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    /* background: chartreuse; */
+    .col-container{
+        margin: 20px;
+        /* background: chocolate; */
+        width: 450px;
+        max-width: 100%;
+        height: 550px;
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all ease-in-out .5s;
+        a{
+            text-decoration: none;
+            width: 450px;
+            height: 100vh;
+
+            // card styles
+            .card-container{
+                width: 450px;
+                height: 550px;
+                
+                // img styles
+                .card-img{
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    width: 450px;
+                    height: 290px;
+                    img{
+                        width: 450px;
+                        height: 290px;
+                        max-width: 100%;
+                        object-fit: cover;
+                        transition: all ease-in-out .5s;
+                    }
+                }
+                .card-body{
+                    width: 100%;
+                    box-sizing: border-box;
+                    .body-container{
+                        h1{
+                            color: $title-color-1;
+                            font-family: $font-1;
+                            font-family: $font-2;
+                        }
+                        width: 100%;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        font-family: $font-1;
+                        font-family: $font-2;   
+                        color:$letras-color-1;
+                    }
+                }
+            }
+        }
+
+        
+        
+    }
+    //estilo para subir un chiqui en contenido hacia arriba con el box shadow un fla
+    .col-container:hover{
+        transform: translate3d(0px, -16px, 0px);
+        box-shadow: 0px 0px 17px 0px rgba(34, 34, 34,0.2);
+        
+    }
+    // estilos que al hacer hover agrande la escala de la imagen un fla
+    .col-container:hover a{
+        .card-container{
+            .card-img{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+//footer styles
+
+footer{
+    width: 100%;
+    background:$bg-rgba-footer-1;
+    display: flex;
+    align-items: flex-end;
+    
+    .footer-container{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        
+        .footer-copy{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $font-1;
+            font-family: $font-2;
+            color:$letras-color-1;
+            width: 100%;
+            height: 50px;
+            /* background: cornflowerblue; */
+        }
+        .footer-content{
+            width: 100%;
+            /* background: burlywood; */
+            display: flex;
+            justify-content: space-between;
+            max-width: 100%;
+            height: auto;
+            overflow: hidden;
+            .foot1{
+            width:calc(100%*1);
+            height: 300px;
+            max-width: 100%;
+            /* background: chartreuse; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                .about-us{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width:calc(100%*1);
+                    height: 300px;
+                    margin: 0;
+                    padding: 0;
+                    
+                    .footer-img{
+                        
+                        width: 80px;
+                        height: 80px;
+                        img{
+                            width: 80px;
+                            height: 80px;
+                            object-fit: cover;
+                        }
+                    }
+                    .about-us-content{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                        box-sizing: border-box;
+
+                        h1{
+                            font-family: $font-1;
+                            font-family: $font-2;
+                            color:$title-color-1;
+                            text-align: center;
+                        }
+                        p{
+                        font-family: $font-1;
+                        font-family: $font-2;
+                        color:$letras-color-2;
+                        }
+                    }
+                }
+            }
+            .foot2{
+            width: calc(100%*1);
+            height: 300px;
+            max-width: 100%;
+            /* background:coral; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                .media-links{
+                    
+                    
+                    h1{
+                    font-family: $font-1;
+                    font-family: $font-2;
+                    text-align: center;
+                    width: 100%;
+                    color:$title-color-1;
+                    }
+                    .media-links-container{
+                        display: flex;
+                        justify-content: space-between;
+                        a{
+                            width: 50px;
+                            height: 50px;
+                            font-size: 35px;
+                            margin-left: 15px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            border-radius: 100%;
+                            transition: all ease-in-out .3s;
+                        }
+                        //facebook  styles
+                        .fb-link{
+                            color: $fb-color;
+                            border: 2px solid $fb-color;
+                        }
+                        .fb-link:hover{
+                            color: $fff-color;
+                            background: $fb-color;
+                        }
+                        //instagram styles
+                        .ig-link{
+                            color: $ig-color;
+                            border: 2px solid $ig-color;
+                        }
+                        .ig-link:hover{
+                            color: $fff-color;
+                            background: $ig-color;
+                        }
+                        //youtube styles
+                        .yt-link{
+                            color: $you-color;
+                            border: 2px solid $you-color;
+                        }
+
+                        .yt-link:hover{
+                            color: $fff-color;
+                            background: $you-color;
+                        }
+                    }
+                }
+            }
+            .foot3{
+            width: calc(100%*1);
+            height: 300px;
+            max-width: 100%;
+            /* background: crimson; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                .enlaces-utiles{
+                    
+                    h1{
+                    font-family: $font-1;
+                    font-family: $font-2;
+                    text-align: center;
+                    width: 100%;
+                    color:$title-color-1;
+                    }
+                    .link-container{
+                        display: flex;
+                        justify-content: center;
+                        a{
+                            font-family: $font-1;
+                            font-family: $font-2;
+                            padding: 5px;
+                            margin-left: 15px;
+                            text-decoration: none;
+                            color:$letras-color-1;
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+
+
+        @media (max-width:1000px) {
+            .footer-content{
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        .footer-politica{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                font-family: $font-1;
+                font-family: $font-2;
+                text-decoration: none;
+                margin: 20px;
+                box-sizing: border-box;
+                color:$title-color-1;
+            }
+        }
+    }
+}
+
+
+input[type=file] {
+    margin: 20px 0;
+}
+
+
+.dropTarget {
+    position: relative;
+    border: 3px dashed silver;
+    flex-basis: auto;
+    flex-grow: 20;
+  }
+  .dropTarget::before {
+    content: 'Drop files here';
+    color: silver;
+    font-size: 5vh;
+    height: 5vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+  }
+  #previews > div {
+    box-sizing: border-box;
+    height: 240px;
+    width: 240px;
+    padding: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    img{
+        max-height: 100%;
+        max-width: 100%;
+    }
+  }
+  #previews > div > progress {
+    width: 80%;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    height: calc(100vh - 40px);
+  }
